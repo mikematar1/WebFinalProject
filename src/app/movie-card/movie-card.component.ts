@@ -10,10 +10,11 @@ export class MovieCardComponent implements OnInit {
   @Input() movie: Movie ={
     title: '',
     overview: '',
-    poster_path: ''
+    poster_path: '',
+    id:0
   };
   constructor() { }
-  
+
   ngOnInit(): void {
   }
 
