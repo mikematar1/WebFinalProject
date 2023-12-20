@@ -10,12 +10,23 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getPopularMovies(): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}`;
+  getMovies(pageindex:number = 1): Observable<any> {
+    const url = `https://api.themoviedb.org/3/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageindex}&api_key=${this.apiKey}`;
     return this.http.get(url);
+
   }
 
   getGenres(): Observable<any> {
     return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${this.apiKey}&language=en-US`);
   }
+  getMovieDetails(movieId: number): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}&append_to_response=credits`;
+    return this.http.get(url);
+  }
+
+  getMovieCast(movieId: number): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${this.apiKey}&append_to_response=credits`;
+    return this.http.get(url);
+  }
+
 }

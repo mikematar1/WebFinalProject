@@ -17,3 +17,15 @@
     flex-direction: column;
     width: 18%;
 }
+.main_container {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  gap: 2%;
+  height: 80vh;
+}
+
+body {
+  display: block;
+  margin: 8px;
+}

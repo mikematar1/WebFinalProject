@@ -1,3 +1,12 @@
-<div class="films">
-    <app-movie-card class="card" *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+<div style="text-align:center">
+  <h1>
+    Welcome to Movie App!
+  </h1>
+  <div class="main_container">
+    <app-navbar></app-navbar>
+    <div class="films">
+        <app-movie-card class="card" (click)="navigateToMovieDetails(movie.id)" *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+    </div>
+
+  </div>
 </div>
