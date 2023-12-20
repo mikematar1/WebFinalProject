@@ -14,4 +14,8 @@ export class MovieService {
     const url = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}`;
     return this.http.get(url);
   }
+
+  getGenres(): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${this.apiKey}&language=en-US`);
+  }
 }

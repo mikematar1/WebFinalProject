@@ -5,11 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GenreListComponent } from './genre-list/genre-list.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListComponent
+    MovieListComponent,
+    NavbarComponent,
+    GenreListComponent,
+    MovieCardComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
