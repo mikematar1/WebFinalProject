@@ -1,0 +1,14 @@
+<div *ngIf="movieDetails">
+  <h1>{{ movieDetails.title }}</h1>
+  <p>Release Date: {{ movieDetails.release_date }}</p>
+  <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" alt="{{ movieDetails.title }}">
+  <p>{{ movieDetails.overview }}</p>
+
+</div>
+
+<div *ngFor="let cast of movieCast">
+  <h1>{{ cast.name }}</h1>
+  <p>{{cast.character}}</p>
+  <img [src]="'https://image.tmdb.org/t/p/w500' + cast.profile_path" alt="{{ cast.name }}">
+  <p>{{ movieDetails.overview }}</p>
+</div>
