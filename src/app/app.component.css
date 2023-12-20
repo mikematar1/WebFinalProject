@@ -1,0 +1,35 @@
+
+.app-container{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    gap: 2%;
+    min-height: 100vh;
+    padding: 100px;
+    padding-top:0;
+
+}
+
+.navbar{
+    height:100vh;
+    width: 250px;
+
+}
+
+.main-content{
+    flex-grow: 1; 
+    height: 100vh; 
+
+}
+.main-content::-webkit-scrollbar {
+    display: none;
+  }
+
+ .main-container{
+    padding:20px;
+    padding-top: 0;
+    padding-left: 40px;
+} 
+
+
+

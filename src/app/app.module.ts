@@ -9,7 +9,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { GenreListComponent } from './genre-list/genre-list.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { HeaderComponent } from './header/header.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     GenreListComponent,
     MovieCardComponent,
     PaginationComponent,
+    HeaderComponent
     MovieDetailsComponent
   ],
   imports: [
