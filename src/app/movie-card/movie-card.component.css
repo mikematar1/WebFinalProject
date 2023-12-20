@@ -1,0 +1,5 @@
+.film-poster {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+}

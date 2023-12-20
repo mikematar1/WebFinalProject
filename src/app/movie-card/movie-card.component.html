@@ -1,1 +1,5 @@
-<p>movie-card works!</p>
+<div class="film-poster">
+    <h2 class="card-title">{{ movie.title }}</h2>
+    <img class="img-poster" [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="{{ movie.title }}">
+    <h3 class="card-text">{{ movie.overview }}</h3>
+</div>
