@@ -1,0 +1,33 @@
+  #genres_menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(209, 209, 188);
+    justify-content: space-between;
+    align-self: stretch;
+    margin: 0px;
+    border-radius: 20px;
+    list-style-type: none;
+    padding:15px
+  }
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+  li, a {
+    margin: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: brown;
+    text-decoration: none;
+  }
+
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
