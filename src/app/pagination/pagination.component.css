@@ -1,0 +1,36 @@
+.footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f8f9fa; /* Light grey background, adjust color as needed */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow to lift footer off the page */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    align-items: center; /* Vertically align the buttons */
+  }
+  
+  .prev-button,
+  .next-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: brown; /* Bootstrap primary color, adjust as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+ 
+  
+  .prev-button:disabled,
+  .next-button:disabled {
+    background-color: #6c757d; /* Bootstrap secondary color, adjust as needed */
+    cursor: default;
+  }
+  

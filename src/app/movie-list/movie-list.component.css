@@ -1,7 +1,7 @@
 .films {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 85%;
     background-color: beige;
     justify-content: space-between;
     border-radius: 20px;
@@ -10,6 +10,7 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
+    flex-grow:1;
 }
 
 .card{

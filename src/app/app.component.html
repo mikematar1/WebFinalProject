@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <body>
 
 
@@ -5,10 +7,13 @@
     <h1>
       Welcome to Movie App!
     </h1>
-    <div class="main_container">
+    <div class="app-container">
 
-      <app-navbar></app-navbar>
-      <app-movie-list></app-movie-list>
+      <app-navbar class="navbar"></app-navbar>
+      <div class="main-container">
+        <app-movie-list class="main-content"></app-movie-list>
+
+      </div>
 
 
     </div>
@@ -16,3 +21,4 @@
 
   </div>
 </body>
+<app-pagination class="footer"></app-pagination>
