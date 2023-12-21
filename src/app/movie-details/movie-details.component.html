@@ -1,14 +1,30 @@
-<div *ngIf="movieDetails">
-  <h1>{{ movieDetails.title }}</h1>
-  <p>Release Date: {{ movieDetails.release_date }}</p>
-  <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" alt="{{ movieDetails.title }}">
-  <p>{{ movieDetails.overview }}</p>
+<div class="movie-details-container" *ngIf="movieDetails">
 
-</div>
-
-<div *ngFor="let cast of movieCast">
-  <h1>{{ cast.name }}</h1>
-  <p>{{cast.character}}</p>
-  <img [src]="'https://image.tmdb.org/t/p/w500' + cast.profile_path" alt="{{ cast.name }}">
-  <p>{{ movieDetails.overview }}</p>
+  <div class="movie-header">
+    <div class="movie-poster">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path" alt="{{ movieDetails.title }}">
+    </div>
+    <div class="movie-info">
+      <h1 class="movie-title">{{ movieDetails.title }}
+        <button [class.favorite-active]="isFavorite" (click)="toggleFavorite(movieDetails)">
+          ♥
+        </button>
+      </h1>
+      <p class="movie-release-date">Release Date: {{ movieDetails.release_date | date:'longDate' }}</p>
+      <p class="movie-overview">{{ movieDetails.overview }}</p>
+    </div>
+  </div>
+  <div class="movie-cast">
+    <h2 class="cast-title">Cast</h2>
+    <div class="cast-members">
+      <div class="cast-member" *ngFor="let cast of movieCast">
+        <img [src]="'https://image.tmdb.org/t/p/w500' + cast.profile_path" alt="{{ cast.name }}" class="cast-photo">
+        <h3 class="cast-name">{{ cast.name }}</h3>
+        <p class="cast-character">{{ cast.character }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="back-to-home">
+    <button (click)="goHome()">Back to Home</button>
+  </div>
 </div>
