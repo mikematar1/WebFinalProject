@@ -26,6 +26,12 @@ export class MovieDetailsComponent implements OnInit {
     this.movieService.getMovieCast(this.movieId).subscribe((data:any)=>{
       this.movieCast=data.cast;
     });
+    const storedValue = localStorage.getItem(this.movieId);
+    if(storedValue!=null){
+      this.isFavorite=true;
+    }else{
+      this.isFavorite=false;
+    }
 
   }
 
@@ -35,9 +41,11 @@ export class MovieDetailsComponent implements OnInit {
     const storedValue = localStorage.getItem(this.movieId);
     if(storedValue!=null){
       localStorage.removeItem(this.movieId);
+      this.isFavorite=false;
     }else{
       console.log(this.movieDetails);
       localStorage.setItem(this.movieId, JSON.stringify(temp));
+      this.isFavorite=true;
     }
 
   }
