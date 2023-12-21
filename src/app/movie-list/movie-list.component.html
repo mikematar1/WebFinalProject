@@ -1,6 +1,6 @@
 <div style="text-align:center">
   <h1>
-    Welcome to Movie App!
+    API: themoviedb.org
   </h1>
   <div class="main_container">
     <app-navbar></app-navbar>
@@ -14,7 +14,10 @@
 
 <footer class="footer">
   <div class="pagination-controls">
-      <button (click)="previousPage()" class="prev-button">Previous</button>
-      <button (click)="nextPage()" class="next-button">Next</button>
+
+    <button (click)="previousPage()" class="prev-button">Previous</button>
+    <button (click)="goHome()" class="home-button">Back to Home</button>
+    <button (click)="nextPage()" class="next-button">Next</button>
+
   </div>
 </footer>

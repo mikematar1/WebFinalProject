@@ -103,4 +103,7 @@ export class MovieListComponent implements OnInit {
     }
 
   }
+  goHome(): void {
+    this.router.navigate(['/']); // Navigate to the home route
+  }
 }
