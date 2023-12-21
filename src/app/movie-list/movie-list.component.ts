@@ -70,6 +70,14 @@ export class MovieListComponent implements OnInit {
           break;
         case 'favorites':
           ///////////////////////
+          const allValues: any[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const value = localStorage.getItem(localStorage.key(i) as any) as any;
+            console.log(value.overview);
+            allValues.push(value);
+          }
+          this.movies=allValues;
+
           break;
         case 'genre':
           this.route.params.subscribe(params=>{
@@ -80,7 +88,11 @@ export class MovieListComponent implements OnInit {
 
           break;
         default:
-
+          this.route.params.subscribe(params=>{
+            this.movieService.getMoviesByName(params['name']).subscribe((data: any) => {
+              this.movies = data.results;
+            });
+          })
           //for searching
           break;
       }

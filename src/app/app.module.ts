@@ -11,7 +11,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { HeaderComponent } from './header/header.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
-
+import {FormsModule} from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

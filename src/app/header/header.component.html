@@ -6,7 +6,9 @@
         <a (click)="navigateToUpcoming()" class="nav-link">Upcoming</a>
         <a (click)="navigateTofavorites()" class="nav-link">Favorites</a>
     </nav>
-    <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search a movie" />
-    </div>
+    <form class="search-form" (ngSubmit)="onSubmit()">
+      <input type="text" [(ngModel)]="search" placeholder="Search movies..." name="search" />
+      <button type="submit">Search</button>
+    </form>
+
 </header>

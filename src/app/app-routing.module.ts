@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'top-rated', component: MovieListComponent },
   { path: 'upcoming', component: MovieListComponent },
   { path: 'favorites', component: MovieListComponent },
+  { path: 'search/:name', component: MovieListComponent },
   { path: '', component: MovieListComponent },
 ];
 

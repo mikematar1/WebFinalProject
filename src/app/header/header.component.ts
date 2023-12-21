@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  search: string = '';
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -26,6 +26,14 @@ export class HeaderComponent implements OnInit {
   }
   navigateTofavorites(){
     this.router.navigate(['favorites']);
+  }
+  onSubmit() {
+    // Check if the search string is not empty
+    if (this.search.trim()) {
+      // Navigate to the /movie/:movieName route
+      this.router.navigate(['search', this.search.trim()]);
+      this.search = ''; // Optionally clear the search input after navigation
+    }
   }
 
 }
