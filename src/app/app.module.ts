@@ -21,7 +21,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     GenreListComponent,
     MovieCardComponent,
     PaginationComponent,
-    HeaderComponent
+    HeaderComponent,
     MovieDetailsComponent
   ],
   imports: [

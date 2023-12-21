@@ -1,10 +1,10 @@
 <header class="app-header">
     <nav class="nav-sections">
-        <a href="#" class="nav-link">Now Playing</a>
-        <a href="#" class="nav-link">Popular</a>
-        <a href="#" class="nav-link">Top Rated</a>
-        <a href="#" class="nav-link">Upcoming</a>
-        <a href="#" class="nav-link">Favorites</a>
+        <a (click)="navigateToNowPlaying()" class="nav-link">Now Playing</a>
+        <a (click)="navigateToPopular()" class="nav-link">Popular</a>
+        <a (click)="navigateToTopRated()" class="nav-link">Top Rated</a>
+        <a (click)="navigateToUpcoming()" class="nav-link">Upcoming</a>
+        <a (click)="navigateTofavorites()" class="nav-link">Favorites</a>
     </nav>
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Search a movie" />
