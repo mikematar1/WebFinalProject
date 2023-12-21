@@ -32,23 +32,23 @@ export class MovieService {
     return this.http.get(url);
   }
 
-  getNowPlayingMovies(): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1&api_key=${this.apiKey}`;
+  getNowPlayingMovies(pageindex:number=1): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageindex}&api_key=${this.apiKey}`;
     return this.http.get(url);
   }
 
-  getPopularMovies(): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${this.apiKey}`;
+  getPopularMovies(pageindex:number=1): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${pageindex}&api_key=${this.apiKey}`;
     return this.http.get(url);
   }
 
-  getTopRatedMovies(): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${this.apiKey}`;
+  getTopRatedMovies(pageindex:number=1): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${pageindex}&api_key=${this.apiKey}`;
     return this.http.get(url);
   }
 
-  getUpcomingMovies(): Observable<any> {
-    const url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=${this.apiKey}`;
+  getUpcomingMovies(pageindex:number=1): Observable<any> {
+    const url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=${pageindex}&api_key=${this.apiKey}`;
     return this.http.get(url);
   }
 
