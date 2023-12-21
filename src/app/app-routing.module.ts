@@ -5,6 +5,12 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 
 const routes: Routes = [
   { path: 'movie/:id', component: MovieDetailsComponent },
+  { path: 'genre/:id', component: MovieListComponent },
+  { path: 'now-playing', component: MovieListComponent },
+  { path: 'popular', component: MovieListComponent },
+  { path: 'top-rated', component: MovieListComponent },
+  { path: 'upcoming', component: MovieListComponent },
+  { path: 'favorites', component: MovieListComponent },
   { path: '', component: MovieListComponent },
 ];
 

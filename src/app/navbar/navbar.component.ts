@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
       this.genres = data.genres;
     });
   }
-  navigateToMovieDetails(genreid:any){
+  navigateToGenreFilter(genreid:any){
     this.router.navigate(['genre',genreid]);
   }
 }

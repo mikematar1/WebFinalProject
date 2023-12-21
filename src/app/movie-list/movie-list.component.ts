@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MovieListComponent implements OnInit {
   movies: Movie[] = [];
-
+  currentpage=1;
   constructor(private movieService: MovieService,private router:Router,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -22,21 +22,34 @@ export class MovieListComponent implements OnInit {
         switch (path) {
           case 'now-playing':
             //disable the next and previous buttons
-
+            this.movieService.getNowPlayingMovies().subscribe((data: any) => {
+              this.movies = data.results;
+            });
             break;
           case 'popular':
-
+            this.movieService.getPopularMovies().subscribe((data: any) => {
+              this.movies = data.results;
+            });
             break;
           case 'top-rated':
-
+            this.movieService.getTopRatedMovies().subscribe((data: any) => {
+              this.movies = data.results;
+            });
             break;
           case 'upcoming':
-
+            this.movieService.getUpcomingMovies().subscribe((data: any) => {
+              this.movies = data.results;
+            });
             break;
           case 'favorites':
-
+            ///////////////////////
             break;
           case 'genre':
+            this.route.params.subscribe(params=>{
+              this.movieService.getMoviesByGenre(1,params['id']).subscribe((data: any) => {
+                this.movies = data.results;
+              });
+            })
 
             break;
           default:
