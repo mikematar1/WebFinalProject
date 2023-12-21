@@ -49,7 +49,7 @@ body {
 }
 
 .prev-button,
-.next-button {
+.next-button,.home-button{
   padding: 10px 20px;
   margin: 0 5px;
   background-color: brown; /* Bootstrap primary color, adjust as needed */
@@ -61,9 +61,6 @@ body {
 }
 
 
-
-.prev-button:disabled,
-.next-button:disabled {
-  background-color: #6c757d; /* Bootstrap secondary color, adjust as needed */
-  cursor: default;
+h1{
+    color:brown;
 }
