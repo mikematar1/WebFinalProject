@@ -29,7 +29,17 @@ export class MovieDetailsComponent implements OnInit {
 
   }
 
+  setFavorite(){
 
+    const storedValue = localStorage.getItem(this.movieId);
+    if(storedValue!=null){
+      localStorage.removeItem(this.movieId);
+    }else{
+      console.log(this.movieDetails);
+      localStorage.setItem(this.movieId, this.movieDetails);
+    }
+
+  }
   goHome(): void {
     this.router.navigate(['/']); // Navigate to the home route
   }
