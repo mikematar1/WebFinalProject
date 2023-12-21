@@ -72,7 +72,8 @@ export class MovieListComponent implements OnInit {
           ///////////////////////
           const allValues: any[] = [];
           for (let i = 0; i < localStorage.length; i++) {
-            const value = localStorage.getItem(localStorage.key(i) as any) as any;
+            var value = localStorage.getItem(localStorage.key(i) as any) as any;
+            value= JSON.parse(value);
             console.log(value.overview);
             allValues.push(value);
           }

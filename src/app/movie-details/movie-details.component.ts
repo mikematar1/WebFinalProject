@@ -30,13 +30,14 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   setFavorite(){
+    let temp = {id:this.movieDetails.id,title:this.movieDetails.title,overview:this.movieDetails.overview,poster_path:this.movieDetails.poster_path};
 
     const storedValue = localStorage.getItem(this.movieId);
     if(storedValue!=null){
       localStorage.removeItem(this.movieId);
     }else{
       console.log(this.movieDetails);
-      localStorage.setItem(this.movieId, this.movieDetails);
+      localStorage.setItem(this.movieId, JSON.stringify(temp));
     }
 
   }
